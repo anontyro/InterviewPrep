@@ -25,6 +25,11 @@ public class ProgrammingExercises {
             FizzBuzz fizzBuzz = new FizzBuzz(1, 101);
         } else if (selected == 'u') {
             UniqueCharactersOnly unique = new UniqueCharactersOnly();
+        } else if(selected == 'p'){
+            System.out.println("Enter A word to check if it is a Palindrome: ");
+            Scanner scan = new Scanner(System.in);
+            String userWord = scan.nextLine();
+            Palindrome palindrome = new Palindrome(userWord);
         } else {
             System.out.println("No class found for the letter");
         }
@@ -32,7 +37,7 @@ public class ProgrammingExercises {
     }
 
     protected enum Classes {
-        Fizzbuz, UniqueString
+        Fizzbuz, UniqueString, Palindrome
     }
 
     public static void main(String[] args) {
