@@ -33,9 +33,28 @@ public class ProgrammingExercises {
         } else {
             System.out.println("No class found for the letter");
         }
+        
+        reRun();
 
     }
+    
+    private void reRun(){
+        System.out.println( "\n"+
+                "----------------------------------------------------");
+        System.out.println("Would you like to try another program? y/n");
+        Scanner scanner = new Scanner(System.in);
+        String userInput = scanner.nextLine();
+        if(userInput.charAt(0) == 'y'){
+            userSelect();
+        }else{
+            System.out.println("Goodbye!");
+            System.exit(0);
+        }
+    }
 
+    /**
+     * enum class to iterate over and produce the list for the user to pick from
+     */
     protected enum Classes {
         Fizzbuz, UniqueString, Palindrome
     }
